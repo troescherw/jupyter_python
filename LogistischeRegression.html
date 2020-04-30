@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>ZZ_Jupyter_PYTHONLogistischeRegression</title>
+<title>LogistischeRegression</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13085,7 +13085,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[157]:</div>
+<div class="prompt input_prompt">In&nbsp;[274]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13107,7 +13107,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[157]:</div>
+    <div class="prompt output_prompt">Out[274]:</div>
 
 
 
@@ -13231,7 +13231,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[158]:</div>
+<div class="prompt input_prompt">In&nbsp;[275]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
@@ -13251,7 +13251,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[158]:</div>
+    <div class="prompt output_prompt">Out[275]:</div>
 
 
 
@@ -13280,7 +13280,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[159]:</div>
+<div class="prompt input_prompt">In&nbsp;[276]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Schuljahre&quot;</span><span class="p">:[</span><span class="mi">14</span><span class="p">]}))</span>
@@ -13296,7 +13296,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[159]:</div>
+    <div class="prompt output_prompt">Out[276]:</div>
 
 
 
@@ -13322,7 +13322,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[160]:</div>
+<div class="prompt input_prompt">In&nbsp;[277]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -13369,7 +13369,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[161]:</div>
+<div class="prompt input_prompt">In&nbsp;[278]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Schuljahre&quot;</span><span class="p">:[</span><span class="mi">8</span><span class="p">]}))</span>
@@ -13385,7 +13385,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[161]:</div>
+    <div class="prompt output_prompt">Out[278]:</div>
 
 
 
@@ -13404,14 +13404,14 @@ dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Beispiel-Shuttle-(Challanger-Katastrophe)">Beispiel Shuttle (Challanger-Katastrophe)<a class="anchor-link" href="#Beispiel-Shuttle-(Challanger-Katastrophe)">&#182;</a></h2><p>Vorhersage, ob die verbaute Gummidichtung (O-Ring) bei der damals herrschenden Temperatur abdichtet. Wir laden den Datensatz <em>shuttle.csv</em> und führen eine Logistische Regression durch.</p>
+<h2 id="Beispiel-2:-Shuttle-(Challanger-Katastrophe)">Beispiel 2: Shuttle (Challanger-Katastrophe)<a class="anchor-link" href="#Beispiel-2:-Shuttle-(Challanger-Katastrophe)">&#182;</a></h2><p>Vorhersage, ob die verbaute Gummidichtung (O-Ring) bei der damals herrschenden Temperatur abdichtet. Wir laden den Datensatz <em>shuttle.csv</em> und führen eine Logistische Regression durch.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[162]:</div>
+<div class="prompt input_prompt">In&nbsp;[279]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13435,7 +13435,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[162]:</div>
+    <div class="prompt output_prompt">Out[279]:</div>
 
 
 
@@ -13458,10 +13458,10 @@ dtype: float64</pre>
   <th>Method:</th>                <td>IRLS</td>       <th>  Log-Likelihood:    </th> <td> -10.158</td>
 </tr>
 <tr>
-  <th>Date:</th>            <td>Mon, 20 Apr 2020</td> <th>  Deviance:          </th> <td>  20.315</td>
+  <th>Date:</th>            <td>Thu, 30 Apr 2020</td> <th>  Deviance:          </th> <td>  20.315</td>
 </tr>
 <tr>
-  <th>Time:</th>                <td>16:05:11</td>     <th>  Pearson chi2:      </th>  <td>  23.2</td> 
+  <th>Time:</th>                <td>13:54:58</td>     <th>  Pearson chi2:      </th>  <td>  23.2</td> 
 </tr>
 <tr>
   <th>No. Iterations:</th>          <td>5</td>        <th>                     </th>     <td> </td>   
@@ -13499,7 +13499,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[163]:</div>
+<div class="prompt input_prompt">In&nbsp;[280]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;temperature&quot;</span><span class="p">:[</span><span class="mi">31</span><span class="p">]}))</span>
@@ -13515,7 +13515,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[163]:</div>
+    <div class="prompt output_prompt">Out[280]:</div>
 
 
 
@@ -13541,7 +13541,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[164]:</div>
+<div class="prompt input_prompt">In&nbsp;[281]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -13594,7 +13594,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[165]:</div>
+<div class="prompt input_prompt">In&nbsp;[282]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -13614,7 +13614,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[165]:</div>
+    <div class="prompt output_prompt">Out[282]:</div>
 
 
 
@@ -13839,7 +13839,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[166]:</div>
+<div class="prompt input_prompt">In&nbsp;[283]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">titanic</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -13855,7 +13855,7 @@ dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[166]:</div>
+    <div class="prompt output_prompt">Out[283]:</div>
 
 
 
@@ -13892,7 +13892,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[167]:</div>
+<div class="prompt input_prompt">In&nbsp;[284]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_age</span> <span class="o">=</span> <span class="n">titanic</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -13914,7 +13914,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[168]:</div>
+<div class="prompt input_prompt">In&nbsp;[285]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -13939,7 +13939,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[169]:</div>
+<div class="prompt input_prompt">In&nbsp;[286]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -13959,7 +13959,7 @@ dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[169]:</div>
+    <div class="prompt output_prompt">Out[286]:</div>
 
 
 
@@ -13982,10 +13982,10 @@ dtype: int64</pre>
   <th>Method:</th>                <td>IRLS</td>       <th>  Log-Likelihood:    </th> <td> -288.41</td>
 </tr>
 <tr>
-  <th>Date:</th>            <td>Mon, 20 Apr 2020</td> <th>  Deviance:          </th> <td>  576.83</td>
+  <th>Date:</th>            <td>Thu, 30 Apr 2020</td> <th>  Deviance:          </th> <td>  576.83</td>
 </tr>
 <tr>
-  <th>Time:</th>                <td>16:05:12</td>     <th>  Pearson chi2:      </th>  <td>  650.</td> 
+  <th>Time:</th>                <td>13:55:00</td>     <th>  Pearson chi2:      </th>  <td>  650.</td> 
 </tr>
 <tr>
   <th>No. Iterations:</th>          <td>5</td>        <th>                     </th>     <td> </td>   
@@ -14032,7 +14032,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[170]:</div>
+<div class="prompt input_prompt">In&nbsp;[287]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
@@ -14092,7 +14092,7 @@ weighted avg       0.81      0.81      0.80       268
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[171]:</div>
+<div class="prompt input_prompt">In&nbsp;[288]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="s2">&quot;Sex&quot;</span><span class="p">:[</span><span class="s2">&quot;male&quot;</span><span class="p">],</span> <span class="s2">&quot;Pclass&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}))</span>
@@ -14108,7 +14108,7 @@ weighted avg       0.81      0.81      0.80       268
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[171]:</div>
+    <div class="prompt output_prompt">Out[288]:</div>
 
 
 
@@ -14134,7 +14134,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[172]:</div>
+<div class="prompt input_prompt">In&nbsp;[289]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14190,7 +14190,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[173]:</div>
+<div class="prompt input_prompt">In&nbsp;[290]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
@@ -14239,6 +14239,601 @@ dtype: float64</pre>
 >
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Beispiel-4:-Vorhersage-einer-Herzkrankheit">Beispiel 4: Vorhersage einer Herzkrankheit<a class="anchor-link" href="#Beispiel-4:-Vorhersage-einer-Herzkrankheit">&#182;</a></h2><p>Ein Beispiel aus der Medizin! Wir wollen anhand des Datensatzes <em>heartdisease.csv</em> mit den folgenden Features vorhersagen, ob eine Person an einer Herzkrankheit erkranken wird:</p>
+<p><strong>Beschreibung der Features:</strong></p>
+<table>
+<thead><tr>
+<th style="text-align:left">Feature</th>
+<th style="text-align:left">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>age</strong></td>
+<td style="text-align:left">age in years</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>sex</strong></td>
+<td style="text-align:left">sex (1 = male; 0 = female)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>cp</strong></td>
+<td style="text-align:left">chest pain type</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 1 : typical angina</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 2 : atypical angina</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 3 : non-anginal pain</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 4 : asymptomatic</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>trestbps</strong></td>
+<td style="text-align:left">resting blood pressure (in mm Hg on admission to the hospital)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>chol</strong></td>
+<td style="text-align:left">serum cholestoral in mg/dl</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>fbs</strong></td>
+<td style="text-align:left">(fasting blood sugar &gt; 120 mg/dl)  (1 = true; 0 = false)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>restecg</strong></td>
+<td style="text-align:left">resting electrocardiographic results</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 0: normal</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 1: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of &gt; 0.05 mV)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 2: showing probable or definite left ventricular hypertrophy by Estes' criteria</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>thalach</strong></td>
+<td style="text-align:left">maximum heart rate achieved</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>exang</strong></td>
+<td style="text-align:left">exercise induced angina (1 = yes; 0 = no)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>oldpeak</strong></td>
+<td style="text-align:left">ST depression induced by exercise relative to rest</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>slope</strong></td>
+<td style="text-align:left">the slope of the peak exercise ST segment</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 1: upsloping</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 2: flat</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Value 3: downsloping</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>ca</strong></td>
+<td style="text-align:left">number of major vessels (0-3) colored by flourosopy</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>thal</strong></td>
+<td style="text-align:left">3 = normal; 6 = fixed defect; 7 = reversable defect</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>hd</strong></td>
+<td style="text-align:left"><strong>diagnosis of heart disease</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Wir laden den Datensatz in ein Pandas DataFrame. Da das Feature <em>hd</em> nicht nur angibt, ob, sondern auch welche Herzerkrankung vorliegt, setzen wir alle Werte &gt;=1 auf 1.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[291]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/troescherw/datasets/master/heartdisease.csv&quot;</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;sex&quot;</span><span class="p">,</span><span class="s2">&quot;cp&quot;</span><span class="p">,</span><span class="s2">&quot;trestbps&quot;</span><span class="p">,</span><span class="s2">&quot;chol&quot;</span><span class="p">,</span><span class="s2">&quot;fbs&quot;</span><span class="p">,</span><span class="s2">&quot;restecg&quot;</span><span class="p">,</span><span class="s2">&quot;thalach&quot;</span><span class="p">,</span><span class="s2">&quot;exang&quot;</span><span class="p">,</span><span class="s2">&quot;oldpeak&quot;</span><span class="p">,</span><span class="s2">&quot;slope&quot;</span><span class="p">,</span><span class="s2">&quot;ca&quot;</span><span class="p">,</span><span class="s2">&quot;thal&quot;</span><span class="p">,</span><span class="s2">&quot;status&quot;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="n">headers</span>
+<span class="n">df</span><span class="o">.</span><span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;krank&quot;</span> <span class="k">if</span> <span class="n">x</span><span class="o">&gt;=</span><span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;gesund&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">status</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(303, 14)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[291]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>age</th>
+      <th>sex</th>
+      <th>cp</th>
+      <th>trestbps</th>
+      <th>chol</th>
+      <th>fbs</th>
+      <th>restecg</th>
+      <th>thalach</th>
+      <th>exang</th>
+      <th>oldpeak</th>
+      <th>slope</th>
+      <th>ca</th>
+      <th>thal</th>
+      <th>status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>63.0</td>
+      <td>1.0</td>
+      <td>1.0</td>
+      <td>145.0</td>
+      <td>233.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>150.0</td>
+      <td>0.0</td>
+      <td>2.3</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>6.0</td>
+      <td>gesund</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>160.0</td>
+      <td>286.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>108.0</td>
+      <td>1.0</td>
+      <td>1.5</td>
+      <td>2.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>krank</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>67.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>120.0</td>
+      <td>229.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>129.0</td>
+      <td>1.0</td>
+      <td>2.6</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>7.0</td>
+      <td>krank</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>37.0</td>
+      <td>1.0</td>
+      <td>3.0</td>
+      <td>130.0</td>
+      <td>250.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>187.0</td>
+      <td>0.0</td>
+      <td>3.5</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>gesund</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>41.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>130.0</td>
+      <td>204.0</td>
+      <td>0.0</td>
+      <td>2.0</td>
+      <td>172.0</td>
+      <td>0.0</td>
+      <td>1.4</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>gesund</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[292]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">status</span>
+
+<span class="c1"># Trainings- und Testdaten</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[293]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="c1"># Modell erstellen</span>
+<span class="c1"># cp, restecg und slope sind kategoriale Variablen</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">glm</span><span class="p">(</span><span class="s2">&quot;C(status)~age+sex+C(cp)+trestbps+chol+fbs+C(restecg)+thalach+exang+oldpeak+C(slope)+ca+thal&quot;</span><span class="p">,</span> 
+                <span class="n">data</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span> <span class="n">family</span><span class="o">=</span><span class="n">sm</span><span class="o">.</span><span class="n">families</span><span class="o">.</span><span class="n">Binomial</span><span class="p">())</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1"># Vorhersage mit Testdaten</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">pred_class</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;gesund&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span><span class="mf">0.5</span> <span class="k">else</span> <span class="s2">&quot;krank&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pred</span><span class="p">]</span>
+
+<span class="c1"># Modellreport</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">pred_class</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>              precision    recall  f1-score   support
+
+      gesund       0.85      0.76      0.80        45
+       krank       0.69      0.81      0.75        31
+
+    accuracy                           0.78        76
+   macro avg       0.77      0.78      0.77        76
+weighted avg       0.79      0.78      0.78        76
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[294]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[294]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<table class="simpletable">
+<caption>Generalized Linear Model Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>   <td>['C(status)[gesund]', 'C(status)[krank]']</td> <th>  No. Observations:  </th>  <td>   227</td> 
+</tr>
+<tr>
+  <th>Model:</th>                              <td>GLM</td>                    <th>  Df Residuals:      </th>  <td>   204</td> 
+</tr>
+<tr>
+  <th>Model Family:</th>                    <td>Binomial</td>                  <th>  Df Model:          </th>  <td>    22</td> 
+</tr>
+<tr>
+  <th>Link Function:</th>                     <td>logit</td>                   <th>  Scale:             </th> <td>  1.0000</td>
+</tr>
+<tr>
+  <th>Method:</th>                            <td>IRLS</td>                    <th>  Log-Likelihood:    </th> <td> -64.088</td>
+</tr>
+<tr>
+  <th>Date:</th>                        <td>Thu, 30 Apr 2020</td>              <th>  Deviance:          </th> <td>  128.18</td>
+</tr>
+<tr>
+  <th>Time:</th>                            <td>13:55:03</td>                  <th>  Pearson chi2:      </th>  <td>  296.</td> 
+</tr>
+<tr>
+  <th>No. Iterations:</th>                      <td>7</td>                     <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>                 <td>nonrobust</td>                 <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+          <td></td>             <th>coef</th>     <th>std err</th>      <th>z</th>      <th>P>|z|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>         <td>    9.7744</td> <td>    3.921</td> <td>    2.493</td> <td> 0.013</td> <td>    2.089</td> <td>   17.460</td>
+</tr>
+<tr>
+  <th>C(cp)[T.2.0]</th>      <td>   -1.6902</td> <td>    1.002</td> <td>   -1.687</td> <td> 0.092</td> <td>   -3.654</td> <td>    0.274</td>
+</tr>
+<tr>
+  <th>C(cp)[T.3.0]</th>      <td>   -0.3421</td> <td>    0.888</td> <td>   -0.385</td> <td> 0.700</td> <td>   -2.082</td> <td>    1.398</td>
+</tr>
+<tr>
+  <th>C(cp)[T.4.0]</th>      <td>   -2.4047</td> <td>    0.894</td> <td>   -2.688</td> <td> 0.007</td> <td>   -4.158</td> <td>   -0.652</td>
+</tr>
+<tr>
+  <th>C(restecg)[T.1.0]</th> <td>   -0.4427</td> <td>    3.182</td> <td>   -0.139</td> <td> 0.889</td> <td>   -6.679</td> <td>    5.793</td>
+</tr>
+<tr>
+  <th>C(restecg)[T.2.0]</th> <td>   -0.2381</td> <td>    0.485</td> <td>   -0.491</td> <td> 0.623</td> <td>   -1.188</td> <td>    0.712</td>
+</tr>
+<tr>
+  <th>C(slope)[T.2.0]</th>   <td>   -1.6602</td> <td>    0.561</td> <td>   -2.960</td> <td> 0.003</td> <td>   -2.760</td> <td>   -0.561</td>
+</tr>
+<tr>
+  <th>C(slope)[T.3.0]</th>   <td>   -1.1133</td> <td>    1.079</td> <td>   -1.032</td> <td> 0.302</td> <td>   -3.229</td> <td>    1.002</td>
+</tr>
+<tr>
+  <th>ca[T.1.0]</th>         <td>   -1.8893</td> <td>    0.658</td> <td>   -2.871</td> <td> 0.004</td> <td>   -3.179</td> <td>   -0.599</td>
+</tr>
+<tr>
+  <th>ca[T.2.0]</th>         <td>   -3.2605</td> <td>    0.927</td> <td>   -3.517</td> <td> 0.000</td> <td>   -5.078</td> <td>   -1.443</td>
+</tr>
+<tr>
+  <th>ca[T.3.0]</th>         <td>   -2.6116</td> <td>    1.245</td> <td>   -2.098</td> <td> 0.036</td> <td>   -5.051</td> <td>   -0.172</td>
+</tr>
+<tr>
+  <th>ca[T.?]</th>           <td>   -1.2902</td> <td>    4.095</td> <td>   -0.315</td> <td> 0.753</td> <td>   -9.316</td> <td>    6.735</td>
+</tr>
+<tr>
+  <th>thal[T.6.0]</th>       <td>   -0.0377</td> <td>    1.053</td> <td>   -0.036</td> <td> 0.971</td> <td>   -2.101</td> <td>    2.026</td>
+</tr>
+<tr>
+  <th>thal[T.7.0]</th>       <td>   -2.1106</td> <td>    0.589</td> <td>   -3.584</td> <td> 0.000</td> <td>   -3.265</td> <td>   -0.956</td>
+</tr>
+<tr>
+  <th>thal[T.?]</th>         <td>   -2.9045</td> <td>    2.331</td> <td>   -1.246</td> <td> 0.213</td> <td>   -7.472</td> <td>    1.663</td>
+</tr>
+<tr>
+  <th>age</th>               <td>    0.0217</td> <td>    0.031</td> <td>    0.689</td> <td> 0.491</td> <td>   -0.040</td> <td>    0.083</td>
+</tr>
+<tr>
+  <th>sex</th>               <td>   -0.8928</td> <td>    0.681</td> <td>   -1.312</td> <td> 0.190</td> <td>   -2.227</td> <td>    0.441</td>
+</tr>
+<tr>
+  <th>trestbps</th>          <td>   -0.0419</td> <td>    0.015</td> <td>   -2.745</td> <td> 0.006</td> <td>   -0.072</td> <td>   -0.012</td>
+</tr>
+<tr>
+  <th>chol</th>              <td>   -0.0095</td> <td>    0.006</td> <td>   -1.658</td> <td> 0.097</td> <td>   -0.021</td> <td>    0.002</td>
+</tr>
+<tr>
+  <th>fbs</th>               <td>    0.8828</td> <td>    0.758</td> <td>    1.165</td> <td> 0.244</td> <td>   -0.602</td> <td>    2.368</td>
+</tr>
+<tr>
+  <th>thalach</th>           <td>    0.0174</td> <td>    0.016</td> <td>    1.104</td> <td> 0.270</td> <td>   -0.014</td> <td>    0.048</td>
+</tr>
+<tr>
+  <th>exang</th>             <td>   -0.9981</td> <td>    0.567</td> <td>   -1.760</td> <td> 0.078</td> <td>   -2.110</td> <td>    0.113</td>
+</tr>
+<tr>
+  <th>oldpeak</th>           <td>   -0.3761</td> <td>    0.290</td> <td>   -1.296</td> <td> 0.195</td> <td>   -0.945</td> <td>    0.193</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Erstellen wir noch eine ROC-Kurve und lassen die AUC berechnen:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[295]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_curve</span>
+
+
+<span class="n">y_test</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s2">&quot;gesund&quot;</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">y_test</span><span class="p">]</span>
+<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">roc_curve</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;ROC-Kurve&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;fpr&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;tpr&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[295]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[296]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">roc_auc_score</span>
+<span class="n">pred_class</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s2">&quot;gesund&quot;</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pred_class</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AUC = &quot;</span><span class="p">,</span> <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred_class</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>AUC =  0.7722222222222223
+</pre>
+</div>
 </div>
 
 </div>
