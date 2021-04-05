@@ -14618,6 +14618,355 @@ dtype: float64</pre>
 </div>
 
 </div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Wir können die Pseudo-Inverse auch direkt mit Hilfe der Funktion <em>np.linalg.pinv</em> berechnen lassen:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="nd">@y</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>array([1.49391033, 0.0235758 , 0.005399  ])</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Weiter oben ist aufgeführt, dass es sich bei der Koeffizienten-Matrix um <em>linear unabhängige</em> Gleichungen handeln muss. Dies erklärt nun auch, weshalb man bei der Dummy-Kodierung nur k-1 Spalten einfügen darf. Würde man dies missachten, und zum Beispiel bei der Kategorie <em>Lage</em> im Beispiel mit den Mietpreisen folgende Matrix erstellen:</p>
+<table>
+<thead><tr>
+<th style="text-align:center">Quadratmeter</th>
+<th style="text-align:center">Innenstadt</th>
+<th style="text-align:center">Umland</th>
+<th style="text-align:center">Aussenbezirk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">41</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">79</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">180</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">...</td>
+<td style="text-align:center">...</td>
+<td style="text-align:center">...</td>
+<td style="text-align:center">...</td>
+</tr>
+</tbody>
+</table>
+<p>Wo wären die Spalten <em>Innenstadt</em>, <em>Umland</em>, und <em>Aussenbezirk</em> linear abhängig: Man könnte auf den Inhalt einer Spalte schließen, in dem wir die anderen beiden Spaltenwerte kennen. Wäre zum Beispiel <em>Innenstadt</em> = 0 und <em>Umland</em> = 0, so muss in <em>Aussenbezirk</em> eine 1 stehen!</p>
+<p>Ganz konkret wird es zum Problem, wenn wir die Koeffizienten mit dieser <strong>falschen</strong> Dummy-Kodierung durchführen wollen. Es erscheint nämlich eine Fehlermeldung!</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/troescherw/datasets/master/wohnungen.csv&quot;</span>
+<span class="n">wohnungen</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">wohnungen_dummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">wohnungen</span><span class="p">)</span>
+<span class="n">wohnungen_dummies</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[36]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Mietpreis</th>
+      <th>Quadratmeter</th>
+      <th>Lage_Aussenbezirk</th>
+      <th>Lage_Innenstadt</th>
+      <th>Lage_Umland</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1100</td>
+      <td>87</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>588</td>
+      <td>42</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>850</td>
+      <td>54</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>500</td>
+      <td>33</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1900</td>
+      <td>104</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>1800</td>
+      <td>101</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>2958</td>
+      <td>174</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>950</td>
+      <td>50</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>2656</td>
+      <td>166</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>2400</td>
+      <td>160</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Berechnen wir mit der <em>ols</em>-Funktion die Koeffizienten, so erhalten wir auch eine Warnung, dass der kleinste "Eigenwert" sehr gering ist, was auf eine Multikollinearität hinweist. Dies bedeutet, dass die berechneten Koeffizienten ggf. nicht korrekt sind bzw. das erstellte Modell sehr instabil ist!</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s2">&quot;Mietpreis~Quadratmeter+Lage_Aussenbezirk+Lage_Innenstadt+Lage_Umland&quot;</span><span class="p">,</span>
+               <span class="n">data</span><span class="o">=</span><span class="n">wohnungen_dummies</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>Mietpreis</td>    <th>  R-squared:         </th> <td>   0.943</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.941</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   527.5</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Mon, 05 Apr 2021</td> <th>  Prob (F-statistic):</th> <td>1.73e-59</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>10:51:25</td>     <th>  Log-Likelihood:    </th> <td> -682.44</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>   100</td>      <th>  AIC:               </th> <td>   1373.</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    96</td>      <th>  BIC:               </th> <td>   1383.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     3</td>      <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+          <td></td>             <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>         <td>  151.1396</td> <td>   39.428</td> <td>    3.833</td> <td> 0.000</td> <td>   72.876</td> <td>  229.403</td>
+</tr>
+<tr>
+  <th>Quadratmeter</th>      <td>   17.4891</td> <td>    0.489</td> <td>   35.755</td> <td> 0.000</td> <td>   16.518</td> <td>   18.460</td>
+</tr>
+<tr>
+  <th>Lage_Aussenbezirk</th> <td> -116.5511</td> <td>   31.641</td> <td>   -3.684</td> <td> 0.000</td> <td> -179.358</td> <td>  -53.745</td>
+</tr>
+<tr>
+  <th>Lage_Innenstadt</th>   <td>  536.6284</td> <td>   37.544</td> <td>   14.293</td> <td> 0.000</td> <td>  462.103</td> <td>  611.153</td>
+</tr>
+<tr>
+  <th>Lage_Umland</th>       <td> -268.9377</td> <td>   41.078</td> <td>   -6.547</td> <td> 0.000</td> <td> -350.476</td> <td> -187.399</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 0.150</td> <th>  Durbin-Watson:     </th> <td>   1.592</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.928</td> <th>  Jarque-Bera (JB):  </th> <td>   0.328</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.036</td> <th>  Prob(JB):          </th> <td>   0.849</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 2.729</td> <th>  Cond. No.          </th> <td>7.13e+17</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The smallest eigenvalue is 2.25e-30. This might indicate that there are<br/>strong multicollinearity problems or that the design matrix is singular.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 </body>
 
 
