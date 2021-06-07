@@ -14279,7 +14279,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span>
@@ -14340,7 +14340,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -14361,7 +14361,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wir können nun die Parameter ausgeben, die die beste Performance lieferten:</span>
@@ -14397,7 +14397,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wir können nun mit den bisher unverwendeten Testdaten ein Modell erstellen und</span>
@@ -14452,7 +14452,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Schließlich können wir auch noch eine Confusion Matrix ausgeben</span>
@@ -14472,13 +14472,13 @@ weighted avg       0.98      0.98      0.98       360
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x29357d55b50&gt;</pre>
+<pre>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x1fd1d2f77f0&gt;</pre>
 </div>
 
 </div>
@@ -14507,13 +14507,14 @@ weighted avg       0.98      0.98      0.98       360
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="RandomizedSearchCV">RandomizedSearchCV<a class="anchor-link" href="#RandomizedSearchCV">&#182;</a></h2><p>Wir haben für den Hyperparameter <em>K</em> bei K-Nearest-Neighbors vorab definierte K´s vorgegeben (1, 3, 5, 7, 9, und 11). Wir können aber auch zufällig aus einer Range definierte Werte für K Modelle trainieren. Vielleicht ist ja ein <em>K</em> das "beste" K, das wir vorab gar nicht in Betracht ziehen!? Die Klasse <em>RandomizedSearchCV</em> wählt zufällige Kombinationen aller vorgegebenen Parameter aus und führt schließlich wieder mit jedes dieser Kombinationen eine K-Fold-Cross-Validation aus.</p>
-<p>Statt der vorgegebenen Liste für die K´s wird hier also eine Bereich definiert, im Beispiel Werte für K von 1 bis 12:</p>
+<p>Statt der vorgegebenen Liste für die K´s wird hier also eine Bereich definiert, im Beispiel Werte für K von 1 bis 12.</p>
+<p><em>Hinweis:</em> Im gegebenen Beispiel macht die Verwendung eines <em>RandomizedSearchCV</em> wenig Sinn, da wir nur wenige Parameter verwenden. Je mehr Parameter ein Modell verwendet, insbesondere wenn diese <em>float</em>-Werte enthalten, desto sinnvoller ist der Einsatz eines <em>RandomizedSearchCV</em>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
@@ -14552,7 +14553,7 @@ weighted avg       0.98      0.98      0.98       360
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -14573,7 +14574,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rgrid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
@@ -14596,7 +14597,120 @@ weighted avg       0.98      0.98      0.98       360
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;weights&#39;: &#39;distance&#39;, &#39;n_neighbors&#39;: 2}
+<pre>{&#39;weights&#39;: &#39;uniform&#39;, &#39;n_neighbors&#39;: 1}
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Daten-standardisieren-/-normieren">Daten standardisieren / normieren<a class="anchor-link" href="#Daten-standardisieren-/-normieren">&#182;</a></h2><p>Vielleicht ist es jemandem aufgefallen: Wir haben den Klassifikator K-Nearest-Neighbors verwendet. Wir haben bereits gelernt, dass man u.a. bei Machine-Learning-Modellen, die mit Abstandsberechnungen arbeiten, die Daten vorher skalieren sollte.</p>
+<p>Nun haben wir aber ein kleines Problem: Die Standardisierung der Daten muss für jeden Fold für sich berechnet werden, schließlich verfügt jedes Fold über einen Mittelwert und Standardabweichung (bzw. jeweils eigene Minima und Maxima, sollte man den Min-Max-Scaler verwenden). Wie können wir nun die Daten für jeden Fold für sich standardardisieren?</p>
+<p>Hier hilft uns <strong>Pipelining</strong> weiter: Wir definieren in einer Pipeline eine Folge von Preprocessing-Schritten, der letzte Schritt enthält die <em>fit</em>-Methode für das Erstellen des jeweiligen Modells. Hier möchten wir also <strong>vor</strong> dem Aufruf der <em>fit</em>-Methode die Daten skalieren, hier mit Hilfe der Standardskalierung (Z-Werte).</p>
+<p>Dazu erstellen wir ein Objekt der Klasse <em>Pipeline</em> und übergeben ein Dictionary. Jedem Schlüssel weisen wir einen beliebigen String als Key zu, im Beispiel <em>scaler</em> und <em>kn</em> (für "K-Neighbors").</p>
+<p>Anschließßend führen wir den Grid-Search durch und übergeben die jeweiligen Parameter. Den Parametern wird jeweils der Key aus dem Dictionary, gefolgt durch zwei Underscores vorangestellt. Dadurch kann GridSearch den jeweiligen Parameter korrekt zuordnen.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+
+
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">([(</span> <span class="s2">&quot;scaler&quot;</span> <span class="p">,</span> <span class="n">StandardScaler</span><span class="p">()),</span>
+                       <span class="p">(</span><span class="s2">&quot;kn&quot;</span><span class="p">,</span><span class="n">KNeighborsClassifier</span><span class="p">())])</span>
+
+<span class="n">parameter_grid</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;kn__weights&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;uniform&quot;</span><span class="p">,</span> <span class="s2">&quot;distance&quot;</span><span class="p">],</span>
+                 <span class="s2">&quot;kn__n_neighbors&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">]}</span>
+
+
+
+<span class="n">rgrid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">pipeline</span><span class="p">,</span> <span class="n">parameter_grid</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">rgrid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rgrid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>{&#39;kn__n_neighbors&#39;: 3, &#39;kn__weights&#39;: &#39;uniform&#39;}
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_predictions</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">grid_predictions</span><span class="p">))</span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00        33
+           1       0.97      1.00      0.98        28
+           2       1.00      1.00      1.00        33
+           3       0.97      1.00      0.99        34
+           4       0.98      1.00      0.99        46
+           5       0.98      0.98      0.98        47
+           6       0.97      1.00      0.99        35
+           7       1.00      0.97      0.99        34
+           8       1.00      0.97      0.98        30
+           9       0.97      0.93      0.95        40
+
+    accuracy                           0.98       360
+   macro avg       0.98      0.98      0.98       360
+weighted avg       0.98      0.98      0.98       360
+
 </pre>
 </div>
 </div>
