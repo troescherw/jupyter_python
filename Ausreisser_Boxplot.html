@@ -14265,7 +14265,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -14315,7 +14315,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14335,7 +14335,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
@@ -14359,7 +14359,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14420,7 +14420,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -14466,7 +14466,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">autos8cyl</span> <span class="o">=</span> <span class="n">cars</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">cars</span><span class="o">.</span><span class="n">cyl</span><span class="o">==</span><span class="mi">8</span><span class="p">]</span>
@@ -14486,7 +14486,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
 
 
 
@@ -14520,23 +14520,25 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Ermittle unteres und oberes Quartil</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Alle mpg-Daten:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="p">)</span>
-<span class="n">q1</span> <span class="o">=</span>  <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span><span class="o">=.</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">q3</span> <span class="o">=</span>  <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span><span class="o">=.</span><span class="mi">75</span><span class="p">)</span>
+<span class="n">q1</span> <span class="o">=</span>  <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="mf">.25</span><span class="p">)</span>
+<span class="n">q3</span> <span class="o">=</span>  <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">q</span><span class="o">=</span><span class="mf">.75</span><span class="p">)</span>
+
+<span class="n">iqr</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">-</span> <span class="n">q1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IQR=&quot;</span><span class="p">,</span> <span class="n">iqr</span><span class="p">)</span>
 
 <span class="c1"># Ausgabe der Ausreisser</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Untere Ausreisser: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="p">[(</span><span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span> <span class="o">&lt;</span> <span class="n">q1</span> <span class="o">-</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">iqr</span><span class="p">)])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Obere Ausreisser: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="p">[(</span><span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span> <span class="o">&gt;</span> <span class="n">q3</span> <span class="o">+</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">iqr</span><span class="p">)])</span>
 
-<span class="n">iqr</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">-</span> <span class="n">q1</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;IQR=&quot;</span><span class="p">,</span> <span class="n">iqr</span><span class="p">)</span>
+
 <span class="n">df_no_outliers</span> <span class="o">=</span> <span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span><span class="p">[(</span><span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span> <span class="o">&gt;</span> <span class="n">q1</span> <span class="o">-</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">iqr</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">autos8cyl</span><span class="o">.</span><span class="n">mpg</span> <span class="o">&lt;</span> <span class="n">q3</span> <span class="o">+</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">iqr</span><span class="p">)]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bereinigte Daten ohne Ausreißer:&quot;</span><span class="p">)</span>
@@ -14576,6 +14578,7 @@ a.anchor-link {
 28    15.8
 30    15.0
 Name: mpg, dtype: float64
+IQR= 1.8499999999999996
 Untere Ausreisser: 
  14    10.4
 15    10.4
@@ -14584,7 +14587,6 @@ Name: mpg, dtype: float64
 Obere Ausreisser: 
  24    19.2
 Name: mpg, dtype: float64
-IQR= 1.8499999999999979
 Bereinigte Daten ohne Ausreißer:
 </pre>
 </div>
@@ -14593,7 +14595,7 @@ Bereinigte Daten ohne Ausreißer:
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -14629,7 +14631,7 @@ Name: mpg, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
@@ -14652,7 +14654,7 @@ Name: mpg, dtype: float64</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[28]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -14749,7 +14751,7 @@ Name: mpg, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -14810,7 +14812,7 @@ Name: mpg, dtype: float64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">LocalOutlierFactor</span>
