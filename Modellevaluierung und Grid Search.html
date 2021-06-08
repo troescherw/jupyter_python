@@ -14279,7 +14279,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_digits</span>
@@ -14309,62 +14309,13 @@ a.anchor-link {
 <span class="c1"># &quot;Verbose=3&quot; bestimmt, dass wir einige Ausgaben während des Trainings erhalten,</span>
 <span class="c1"># &quot;n_jobs=-1&quot; bestimmt, dass wir alle Prozessoren für Threads nutzen wollen.</span>
 
+<span class="c1"># Nun trainieren wir insgesamt 60 Modelle (2 * 6 * 5)</span>
 <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">KNeighborsClassifier</span><span class="p">(),</span> <span class="n">parameter_grid</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">&quot;accuracy&quot;</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span> 
 
 <span class="c1"># Nun trainieren wir insgesamt 60 Modelle (2 * 6 * 5)</span>
 <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
 
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Fitting 5 folds for each of 12 candidates, totalling 60 fits
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>GridSearchCV(cv=5, estimator=KNeighborsClassifier(), n_jobs=-1,
-             param_grid={&#39;n_neighbors&#39;: [1, 3, 5, 7, 9, 11],
-                         &#39;weights&#39;: [&#39;uniform&#39;, &#39;distance&#39;]},
-             scoring=&#39;accuracy&#39;, verbose=3)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wir können nun die Parameter ausgeben, die die beste Performance lieferten:</span>
+<span class="c1"># Wir können nun die Parameter ausgeben, die die beste Performance lieferten:</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
 </pre></div>
 
@@ -14385,7 +14336,8 @@ a.anchor-link {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;n_neighbors&#39;: 3, &#39;weights&#39;: &#39;distance&#39;}
+<pre>Fitting 5 folds for each of 12 candidates, totalling 60 fits
+{&#39;n_neighbors&#39;: 3, &#39;weights&#39;: &#39;distance&#39;}
 </pre>
 </div>
 </div>
@@ -14397,11 +14349,11 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wir können nun mit den bisher unverwendeten Testdaten ein Modell erstellen und</span>
-<span class="c1"># das Modell evaluieren. Die Methode predict verwendet das beste gefundene Modell!</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wir können nun mit den bisher unverwendeten Testdaten das Modell evaluieren.</span>
+<span class="c1"># Die Methode predict verwendet das beste gefundene Modell!</span>
 
 <span class="n">grid_predictions</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">grid_predictions</span><span class="p">))</span> 
@@ -14452,7 +14404,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Schließlich können wir auch noch eine Confusion Matrix ausgeben</span>
@@ -14472,13 +14424,13 @@ weighted avg       0.98      0.98      0.98       360
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x1fd1d2f77f0&gt;</pre>
+<pre>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x1c545d8a760&gt;</pre>
 </div>
 
 </div>
@@ -14514,7 +14466,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">RandomizedSearchCV</span>
@@ -14553,7 +14505,7 @@ weighted avg       0.98      0.98      0.98       360
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -14574,7 +14526,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rgrid</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
@@ -14597,7 +14549,7 @@ weighted avg       0.98      0.98      0.98       360
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>{&#39;weights&#39;: &#39;uniform&#39;, &#39;n_neighbors&#39;: 1}
+<pre>{&#39;weights&#39;: &#39;distance&#39;, &#39;n_neighbors&#39;: 2}
 </pre>
 </div>
 </div>
@@ -14619,7 +14571,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
@@ -14670,7 +14622,7 @@ weighted avg       0.98      0.98      0.98       360
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_predictions</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
@@ -14713,6 +14665,181 @@ weighted avg       0.98      0.98      0.98       360
 
 </pre>
 </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Beispiel:-Breast-Cancer-Datensatz-mit-Random-Forest-Classifier">Beispiel: Breast-Cancer-Datensatz mit Random Forest Classifier<a class="anchor-link" href="#Beispiel:-Breast-Cancer-Datensatz-mit-Random-Forest-Classifier">&#182;</a></h2><p>Als abschließendes Beispiel wollen wir nochmals den Breast-Cancer-Datensatz aus sklearn verwenden, um eine Klassifizierung bösartig (malign) und gutartib (benign) vorzunehmen.</p>
+<p>Der RandomForestClassifier bietet viele Hyperparameter, wir wollen folgende optimieren:</p>
+<ul>
+<li>n_estimators (Anzahl der Bäume)</li>
+<li>criterion (Maß für die "Pureness" eines Baumes, Gini oder Entropy)</li>
+<li>max_depth: Maximale Höhe der Bäume</li>
+<li>min_samples_split: Minimale Anzahl der Beobachtungen, die für einen weiteren Split benötigt werden</li>
+<li>max_features: Anzahl der (zufällig ausgewählten) Features.</li>
+</ul>
+<p>Wir erstellen jeweils 10 Folds. Bei einem Decision Tree und somit auch bei einem Random Forest ist eine Standardisierung meist nicht notwendig. Das dauert etwas...</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_breast_cancer</span>
+<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span><span class="p">,</span> <span class="n">GridSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">plot_confusion_matrix</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">load_breast_cancer</span><span class="p">()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">data</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">target</span>
+
+
+<span class="n">params</span>  <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n_estimators&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+           <span class="s2">&quot;criterion&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;gini&quot;</span><span class="p">,</span> <span class="s2">&quot;entropy&quot;</span><span class="p">],</span>
+           <span class="s2">&quot;max_depth&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+           <span class="s2">&quot;min_samples_split&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span>
+           <span class="s2">&quot;max_features&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;auto&quot;</span><span class="p">,</span> <span class="s2">&quot;sqrt&quot;</span><span class="p">,</span> <span class="s2">&quot;log2&quot;</span><span class="p">]}</span>
+
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">)</span>
+
+<span class="n">model_cv</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">RandomForestClassifier</span><span class="p">(),</span> <span class="n">param_grid</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">model_cv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model_cv</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Fitting 10 folds for each of 750 candidates, totalling 7500 fits
+{&#39;criterion&#39;: &#39;entropy&#39;, &#39;max_depth&#39;: 10, &#39;max_features&#39;: &#39;log2&#39;, &#39;min_samples_split&#39;: 3, &#39;n_estimators&#39;: 5}
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Nun erstellen wir wieder mit dem "besten" Modell mit den bisher nicht verwendeten Testdaten eine Prognose und evaluieren das Modell:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pred</span> <span class="o">=</span> <span class="n">model_cv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>              precision    recall  f1-score   support
+
+           0       0.96      0.94      0.95        54
+           1       0.97      0.98      0.97        89
+
+    accuracy                           0.97       143
+   macro avg       0.96      0.96      0.96       143
+weighted avg       0.97      0.97      0.96       143
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">model_cv</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;sklearn.metrics._plot.confusion_matrix.ConfusionMatrixDisplay at 0x1c545d7f040&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
 </div>
 
 </div>
