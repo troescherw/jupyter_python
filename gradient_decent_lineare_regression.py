@@ -17,6 +17,7 @@ Created on Tue Jun 15 07:26:06 2021
 # max_error: Maximaler Fehler (bricht ab, wenn eines der beiden Werte erreicht)
 # d_m: jeweils aktueller Wert für m eingesetzt in die 1. Ableitung der Fehlerfunktion
 # d_t: jeweils aktueller Wert für t eingesetzt in die 1. Ableitung der Fehlerfunktion
+# N: Anzahl der Beobachtungen
 
 import pandas as pd
 import numpy as np
@@ -35,12 +36,12 @@ def gradient_descent(X, y, alpha=0.001, max_iter=1000, max_error=0.0001):
     i = 0
     d_m = 1000
     while i<max_iter and np.absolute(d_m)>max_error: 
-        y_pred = m*X + t  # The current predicted value of Y
-        d_m = (-2/N) * np.sum(X * (y - y_pred))  # Derivative wrt m
-        d_t = (-2/N) * np.sum(y - y_pred)  # Derivative wrt c
+        y_pred = m*X + t  # Vorhergesagte Y-Werte
+        d_m = (-2/N) * np.sum(X * (y - y_pred))  # eingesetzt in part. Ableitung für m
+        d_t = (-2/N) * np.sum(y - y_pred)  # eingetzt in part. Ableitung für t
         
-        m = m - alpha * d_m  # Update m
-        t = t - alpha * d_t  # Update c
+        m = m - alpha * d_m  # Berechne neues m
+        t = t - alpha * d_t  # Berechne neues t
         
     return np.round(m,4), np.round(t,4)
     
