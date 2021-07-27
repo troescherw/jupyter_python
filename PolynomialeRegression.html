@@ -13974,7 +13974,7 @@ a.anchor-link {
 <h1 id="Polynomiale-Regression">Polynomiale Regression<a class="anchor-link" href="#Polynomiale-Regression">&#182;</a></h1><p>Bisher waren die abhängigen Variablen $x_1, x_2, ..., x_2$ wie auch die Koeffizienten $\beta_1, \beta_2, ..., \beta_n$ stets linear, also mit dem Exponenten 1. Daher spricht man auch von der linearen Regression.</p>
 <p>Bei der Linearen Regression wird davon ausgegangen, dass zwischen dem Prädiktor (X-Werte) und der Antwortvariablen Y ein linearer Zusammenhang besteht:</p>
 <p>$\hat{Y} = \beta_0 + \beta_1 x + \beta_2x_2 + ... +\beta_nx_n$</p>
-<p>Allerdings kann die Beziehung zwischen Y und den abhängigen Variablen auch nichtlinear sein. Wenden wir in diesem Fall ein lineares Modell wie oben gezeigt an, so dürfte unser Modells kaum wohl kaum´von hoher Qualität sein!</p>
+<p>Allerdings kann die Beziehung zwischen Y und den abhängigen Variablen auch nichtlinear sein. Wenden wir in diesem Fall ein lineares Modell wie oben gezeigt an, so dürfte unser Modell wohl kaum von hoher Qualität sein!</p>
 <p>Wir simulieren dies anhand folgender künstlich generierter Daten:</p>
 
 </div>
@@ -14078,16 +14078,11 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Vielmehr liegt die Vermutung nahe, dass eine Abhängigkeit, die durch ein Polynom ausgedrückt werden kann, besteht. Ein Polynom ist wie folgt definiert, wobei $n$ dem Grad des Polynoms entspricht:</p>
 <p>$Y = \beta_0 + \beta_1x + \beta_2  x^2  + ... + \beta_n  x^n$</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Können wir auch in so einem Fall eine Lineare Regression durchführen? Ja, können wir! Die Anwendung ist sogar recht einfach: Wir müssen die x-Werte, also die Daten der abhängigen Variablen, indem der Feature-Raum auf ein Polynom $n$-ten Grades erweitert wird.</p>
+<p>Können wir auch in so einem Fall eine Lineare Regression durchführen? Ja, können wir! Die Anwendung ist sogar recht einfach: Wir müssen die x-Werte, also die Daten der abhängigen Variablen, in einen Feature-Raum auf ein Polynom $n$-ten Grades erweitern.</p>
 <p>Haben wir zum Beispiel zwei unahbängige Variablen $x_1$ und $x_2$ und es besteht ein quadratischer Zusammenhang (n=2), so erweitern wir den Feature-Raum mit allen Kombinationen der Features:</p>
 <p>$\hat{Y} = \beta_0 + \beta_1x_1 + \beta_2x_2 +  \beta_3x_1x_2 + \beta_4x_1^2 + \beta_5x_2^2$</p>
-<p>Es müssen also wieder alle $\beta_0, ... , \beta_n$ ermittelt werden, allerdings von den transformierten Daten. Warum sprechen wir dennoch von einer <strong>Linearen</strong> Regression, obwohl die x-Werte Exponenten von &gt;=2 aufweisen? Der Begriff <strong>Lineare Regression</strong> bezieht sich auf die Koeffizienten $\beta_1, \beta_2, ..., \beta_n$, und die sind nach wie vor linear (Exponent=1). Die X-Werte werden dagegen in eine höhere Dimension transformiert und mit diesen transformierten Daten wird wie gewohnt eine Lineare Regression durchgeführt.</p>
-<p>Die Transformation der Daten übernimmt hier die Methode <em>fit_transform</em> der Klasse   <em>PolynomialFeatures</em> aus dem Package <em>sklearn.preprocessing</em>. Ein simples Beispiel:</p>
+<p>Es müssen also wieder alle $\beta_0, ... , \beta_n$ ermittelt werden, allerdings von den transformierten Daten. Warum sprechen wir dennoch von einer <strong>Linearen</strong> Regression, obwohl die x-Werte Exponenten einen Grad &gt;=2 aufweisen? Der Begriff <strong>Lineare Regression</strong> bezieht sich auf die Koeffizienten $\beta_1, \beta_2, ..., \beta_n$, und die sind nach wie vor linear (Exponent=1). Die X-Werte werden dagegen in eine höhere Dimension transformiert und mit diesen transformierten Daten wird wie gewohnt eine Lineare Regression durchgeführt.</p>
+<p>Die Transformation der Daten übernimmt hier die Methode <em>fit_transform</em> der Klasse <em>PolynomialFeatures</em> aus dem Package <em>sklearn.preprocessing</em>. Ein simples Beispiel:</p>
 <table>
 <thead><tr>
 <th style="text-align:left">$$1$$</th>
@@ -14193,7 +14188,7 @@ Daten transformiert:
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Wenden wir dies auf unseren ursprünglichen Datensatz an! Wir transformieren also die Daten und führen mit diesen eine Lineare Regression durch. Anschließend plotten wir die vom Modell progonostizierten Daten zusammen mit den ursprünglichen Daten und erkennen, dass das Modell sehr gut die realen Daten abbildet:</p>
+<p>Wenden wir dies auf unseren ursprünglichen Datensatz an! Wir transformieren also die Daten und führen mit diesen eine Lineare Regression durch. Anschließend plotten wir die vom Modell prognostizierten Daten zusammen mit den ursprünglichen Daten und erkennen, dass das Modell sehr gut die realen Daten abbildet:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14367,9 +14362,9 @@ Daten transformiert:
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Unser Modell bildet sehr gut unsere Daten ab! Was passiert, wenn wir den Grad des Polynoms erhöhen? Im folgenden Programm erstellen wir jeweils ein Modell für verschiedene Exponenten und wenden das Modell jeweils auf ein Test-Datenset an. Wir plotten jeweils die vorhergesagten Daten bezüglich der Trainingsdaten und sehen, dass sich das Modell immer besser an die realen Daten anpasst. Allerdings verallgemeinert unser Modell immer schlechter!</p>
 <p>Wir sehen das in dem Diagramm, das die Fehler (Sum of Squared Errors, SSE), die bezüglich unserer Trainingsdaten gegenüber dem Fehler bezüglich unserer Testdaten gegenüberstellt: Die Fehler im Trainingsdatensatz werden natürlich immer kleiner, da sich das Modell immer besser an die Trainingsdaten anpasst. Bezüglich neuer Daten, also den Testdaten, werden die Fehler aber ab einem bestimmten n wieder größer!</p>
-<p>Eine andere Kennzahl, die bei der Wahl des Polynom-Grades hilfreich sein kann, ist das <strong>Bayes Information Criterion</strong>, kurz <strong>BIC</strong>. In diese Kennzahl fließt die Stichprobengröße, der Grad des Polynoms sowie die SEE ein. BIC "bestraft" das Modell, wenn der Grad des Polynoms zunimmt. Das BIC berechnet sich wie folgt:</p>
+<p>Eine andere Kennzahl, die bei der Wahl des Polynom-Grades hilfreich sein kann, ist das <strong>Bayes Information Criterion</strong>, kurz <strong>BIC</strong>. In diese Kennzahl fließen die Stichprobengröße, der Grad des Polynoms sowie die SEE ein. BIC "bestraft" das Modell, wenn der Grad des Polynoms zunimmt. Das BIC berechnet sich wie folgt:</p>
 <p>$BIC = N \cdot log(SSE) + n \cdot log(N)$</p>
-<p>Wobei hier N die Stichprobengröße und n der Grad des Polynoms ist. Wir ermitteln für jedes n das BIC für die Testdaten und stellen diese in einem weiteren Diagramm dar. Dort, wo das BIC das Minimum hat ist ein guter Kandidat für n.</p>
+<p>wobei hier N die Stichprobengröße und n der Grad des Polynoms ist. Wir ermitteln für jedes n das BIC für die Testdaten und stellen diese in einem weiteren Diagramm dar. Dort, wo das BIC das Minimum hat ist ein guter Kandidat für n.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
